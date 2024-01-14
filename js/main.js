@@ -104,3 +104,15 @@ document.addEventListener('DOMContentLoaded', function () {
     redes.classList.toggle('redes-visible');
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    var themeCheckbox = document.getElementById('theme');
+    var nav = document.querySelector('main .menu');
+  
+    themeCheckbox.addEventListener('change', function () {
+      if (themeCheckbox.checked) {
+        nav.classList.add('theme-claro');
+      } else {
+        nav.classList.remove('theme-claro');
+      }
+    });
+  });

@@ -3,13 +3,13 @@
     --color-primario: #ed830d; /* naranja */
     --color-primario2: #ed840dc5; /* naranja */
     --color-secundario: #6e9033; /* verde */
-    --color-secundario2: #6e903359; /* verde */    
+    --color-secundario2: #6e903359; /* verde */
     --color-terciario: hsl(219, 43%, 44%); /* azul claro */
     --color-cuarto: #363559; /* azul obscuro*/
     --color-cuarto2: #363559b9; /* azul obscuro*/
     --color-quinto: #7d7d7d; /* gris */
     --color-sexto: #00000063; /* gris */
-  
+
 
   }
 
@@ -19,11 +19,11 @@
     box-sizing: border-box;
   }
 
-  body{  
-    overflow-x: hidden;    
+  body{
+    overflow-x: hidden;
   }
 
-  
+
   /* barra de menu */
   nav{
     height: 90px;
@@ -44,13 +44,13 @@
   /* modo oscuro */
   #theme{
     display: none;
-  } 
+  }
 
   .icon1, .icon2{
     position: relative;
     bottom: 15px;
     right: 20px;
-    height: 40px;    
+    height: 40px;
     width: 40px;
     transition: .3s;
     filter: invert(100%);
@@ -71,6 +71,11 @@
 
   #theme:checked + label .icon1{
     display: none;
+  }
+
+  /* este seria el tema oscuro */
+  .theme-claro {
+    background-color: black;
   }
 
 /* hast aqui el theme */
@@ -94,7 +99,7 @@
     padding: 0;
     width: 60%;
     height: 0px;
-    display: flex;    
+    display: flex;
     align-items: center;
     gap: 2vw;
   }
@@ -212,7 +217,7 @@ nav .btn-menu{
     width: 60px;
     transition: .2s;
   }
-  
+
   #whatsappImg:hover{
     transition: .2s;
     scale: 1.1;
@@ -237,13 +242,13 @@ nav .btn-menu{
     margin-left: -50%;
     transition: .3s;
   }
-  
+
   .redes img{
     transition: 500ms;
     width: 50px;
     height: 50px;
   }
-  
+
   .redes img:hover{
     transition: 300ms;
     width: 80px;
@@ -286,13 +291,97 @@ h1{
     color: red;
 }
 
-h2{
-    font-size: 3vw;
-    color: #fff;
+
+
+/* insertando el nosotros nuevo */
+/* --------------------------------------------------------------- */
+
+#wenew {
+  background-color: var(--color-cuarto2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.nos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50%;
+  text-align: justify;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 100px;
+}
+
+.back h2{
+  color:var(--color-cuarto);
+  font-size: 40px;
+}
+
+.nos h2{
+  margin-bottom: 20px;
+  color: var(--color-primario);
+}
+
+.mivi{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+  width: 100%;
+  min-height: 50%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.mivi #fmision2, .mivi #fvision2 {
+  display: flex;
+  /* justify-content: start; */
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  min-height: 90%;
+  transition: .5s;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 0px;
+  gap: 10px;
 }
 
 
-/* --------------------------------------------------------------- */
+
+p{
+  margin: 0;
+  font-size: 29px;
+  color: var(--color-cuarto);
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
+}
+
+.pmivi{
+  margin: 0;
+  margin-left: 30px;
+  margin-right: 50px;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--color-cuarto);
+}
+
+.mivi h2{
+  color: var(--color-primario);
+}
+
+.mivi p{
+  color: white;
+}
+
 
 /* ------------------------------------------------------------------ */
 
@@ -302,6 +391,10 @@ h2{
     width: 100vw;
     background-size: cover;
     background-position: center center;
+}
+
+#servicios h2{
+  color: white;
 }
 
 #nosotros{
@@ -321,7 +414,7 @@ h2{
 /* esta es el estado cuando esta en el viewport */
 
 .subsecLeft{
-  transform: rotate(-180deg) scale(0.2);
+  transform: rotate(-90deg) scale(0.8);
   opacity: 0;
   transition: all 1.2s ease;
   border-radius: 5px;
@@ -330,22 +423,22 @@ h2{
 }
 
 .subsecRigth{
-    transform: rotate(180deg) scale(0.8);
+    transform: rotate(90deg) scale(0.8);
     opacity: 0;
     transition: all 1.2s ease;
     border-radius: 5px;
     padding: 10px;
     margin-top: 100px;
-  }  
-  
+  }
+
   .mostrar{
     transform: rotate(0deg) scale(2);
     opacity: 1;
     position: relative;
-    z-index: 100;  
+    z-index: 100;
   }
   /* --------------hacer responsive---------------------- */
-  #box1, #box3{  
+  #box1, #box3{
     /* margin-top: 100px;   */
     background-color: aqua;
     position: relative;
@@ -488,7 +581,7 @@ footer{
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
     gap: 20px; /* Espacio entre las celdas */
     padding: 20px;
-    background-color: var(--color-cuarto); 
+    background-color: var(--color-cuarto);
     width: 100vw;
     height: 300px;
 }
@@ -512,7 +605,7 @@ footer h2{
 
 .redesfooter div a img{
     padding-top: 10px;
-    width: 60px;    
+    width: 60px;
 }
 
 #red, #cont{
@@ -564,7 +657,7 @@ footer h2{
     margin-top: 1.5px;
     margin-left: 5px;
   }
-  
+
   .fondo{
     overflow: hidden;
     position: fixed;
@@ -667,7 +760,7 @@ footer h2{
     cursor: pointer;
   }
 
-  .subsecLeft, .subsecRigth{  
+  .subsecLeft, .subsecRigth{
     margin-top: 0px;
     background-position: center center;
     width: 25vh;
@@ -762,7 +855,7 @@ footer h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     transform: matrix();
 }
 
@@ -798,7 +891,7 @@ footer div h2{
     height: 15vh;
     margin-left: 0px;
   }
-  
+
   #box2, #box4{
     margin-bottom: 80px;
     background-position: center center;
@@ -814,7 +907,7 @@ footer div h2{
 }
 
 /* media query landscape */
-@media(max-height: 530px){
+@media(max-height: 480px){
 
   #inicio #logopc{
     width: 500px;
@@ -836,7 +929,7 @@ footer div h2{
     z-index: 70;
 }
 
-.subsecLeft, .subsecRigth{  
+.subsecLeft, .subsecRigth{
   margin-top: 0px;
   background-position: center center;
   /* width: 50vh;
@@ -919,7 +1012,7 @@ nav .list{
   margin: auto;
   left: 0;
   right: 0; */
-  /* top: 65px; */
+  top: 65px;
   /* bottom: 100%; */
   width: 85%;
   height: auto;
@@ -939,6 +1032,7 @@ nav .list li{
 }
 
 
+
   nav .list a{
     display: block;
     text-align: center;
@@ -953,7 +1047,230 @@ nav .list li{
   }
 
   .icon1, .icon2{
-    height: 30px;    
+    height: 30px;
     width: 30px;
+  }
+}
+
+/* medias query del wenew */
+
+
+/* primer media query */
+@media(max-width: 1130px){
+  .card div h1{
+      font-size: 45px;
+  }
+
+  .nos{
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2 {
+      padding-top: 10px;
+  }
+
+  .card div h2 {
+      font-size: 40px;
+  }
+
+  .back h2{
+    font-size: 40px;
+  }
+
+  p{
+      font-size: 23px;
+  }
+
+  .pmivi{
+      font-size: 20px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 27px;
+  }
+}
+
+
+/* segunda media query */
+@media(max-width: 800px){
+  .card div h1{
+      font-size: 40px;
+  }
+
+  .card div h2 {
+      font-size: 30px;
+  }
+
+  .mivi{
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nos{
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2{
+      width: 100%;
+      min-height: 45%;
+      transition: .5s;
+      padding-left: 25px;
+      /* padding-right: 0px; */
+  }
+
+  p{
+      font-size: 20px;
+      margin-left: 25px;
+      margin-right: 5px;
+  }
+
+  .pmivi{
+      font-size: 14px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 30px;
+  }
+
+}
+
+/* tercer media query */
+@media(max-width: 550px){
+  .card div h1{
+      font-size: 35px;
+  }
+
+  .card div h2 {
+      font-size: 25px;
+  }
+
+  p{
+      font-size: 15px;
+      margin-left: 5px;
+  }
+
+  .nos{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2 {
+      padding-top: 10px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2{
+      padding-left: 12px;
+      padding-right: 12px;
+  }
+
+  .pmivi{
+      font-size: 13px;
+      margin-right: 15px;
+      margin-left: 15px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 15px;
+  }
+}
+
+
+
+/* cuarta media query */
+@media(max-width: 360px){
+  .card div h1{
+      font-size: 25px;
+  }
+
+  .card div h2 {
+      font-size: 20px;
+  }
+
+  p{
+      font-size: 12px;
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+
+  .pmivi{
+      font-size: 11px;
+  }
+
+  .nos{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2 {
+      padding-top: 2px;
+  }
+
+  .mivi #fmision1, .mivi #fvision1, .mivi #fmision2, .mivi #fvision2{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 12px;
+  }
+}
+
+@media(max-width: 290px){
+  p{
+      font-size: 8px;
+  }
+
+  .mivi #fmision1, .mivi #fvision1, .mivi #fmision2, .mivi #fvision2{
+      padding-left: 1px;
+      padding-right: 1px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2 {
+      padding-top: 1px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 10px;
+  }
+}
+
+/* media query landscape */
+@media(max-height: 530px){
+  .card div h1{
+      font-size: 25px;
+  }
+
+  .card div h2 {
+      font-size: 20px;
+  }
+
+  .mivi{
+      flex-direction: column;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      gap: 10px;
+  }
+
+  .mivi #fmision2, .mivi #fvision2{
+     background-color: #0F0;
+  }
+
+  .mivi #fmision2, .mivi #fvision2 {
+      padding-top: 0px;
+  }
+
+  p{
+      font-size: 15px;
+  }
+
+  .pmivi{
+      font-size: 15px;
+  }
+
+  .mivi #fmision2 h2, .mivi #fvision2 h2{
+      font-size: 20px;
   }
 }

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-76NYFVJ9M7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-76NYFVJ9M7');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,20 +22,20 @@
          <!-- barra lateral de redes sociales -->
         <div class="redes">
 
-            <a  href="https://www.facebook.com/gabriel.navas.165/">
+            <a  href="https://wa.me/584244200338">
                 <img src="./assets/facebook.png" alt="facebook">
             </a>
-            <a href="https://www.instagram.com/gabonavas/">
+            <a href="https://wa.me/584244200338">
                 <img src="./assets/instagram.png" alt="instagram">
             </a>
-            <a href="https://www.tiktok.com/@gabosavanx">
+            <a href="https://wa.me/584244200338">
                 <img src="./assets/tiktok.png" alt="tiktok">
             </a>
 
         </div>
 
         <!-- logo whatsapp -->
-        <a href="https://www.youtube.com/watch?v=2ek6zqVtVf0" id="chat">
+        <a href="https://wa.me/584244200338" id="chat">
             <img src="./assets/whatsapp.png" alt="whatsapp" id="whatsappImg">
         </a>
 
@@ -37,8 +46,8 @@
                 
                 <ul class="list" onclick=myFunction()>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#wenew">Nosotros</a></li>
+                    <li><a href="#servicios">Productos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <!-- <li><a href="#"> -->
                     <input type="checkbox" id="theme">
@@ -57,21 +66,75 @@
                     <div class="line3"></div>            
                 </label>                                
         </nav>
-
        
         <!-- VIDEO DE FONDO -->
         <div class="fondo">
             
-        </div>
-
+        </div> 
         
-
+        
         <!-- SECCIONES GENERALES -->
         <div class="section" id="inicio" onclick=myFunction()>
             <img id="logopc" src="./assets/SVG/Logo horizontal/recursos LOGO LA GRANERA SVG-20.svg" alt="logo_horizontal">
-            <img id="logocel" src="./assets/SVG/Logo principal/recursos LOGO LA GRANERA SVG_Mesa de trabajo 1 copia 2.svg" alt="logo_vertical">
+            <img id="logocel" src="./assets/SVG/Logo principal/recursos LOGO LA GRANERA SVG_Mesa de trabajo 1 copia.svg" alt="logo_vertical">
         </div>
 
+
+        <div class="section" id="wenew">
+            
+                 
+                     <div class="back" id="backid">
+                         <div class="nos" id="nosback">
+                            <h2>¿Quienes somos?</h2>
+                             <p>
+                                 INVERSIONES LA GRANERA C.A., es una empresa dedicada a la comercialización
+                                 y exportación de madera y sub-productos transformados, fertilizantes y materia
+                                 prima para su producción, con estándares de alta calidad, dado respuesta y
+                                 atendiendo la necesidades y requerimientos de cada cliente en los lapsos de
+                                 tiempo más expeditos.
+                             </p><br>
+                             <p>
+                                
+                                 Trabajamos con las mejores empresas fabricantes a nivel nacional, apoyándo-
+                                 nos en la gran variedad de productos que se ofrecen en el mercado y con un
+                                 grupo de profesionales capacitados para ofrecer las más oportunas soluciones
+                                 comerciales a nuestros clientes, en el mercado internacional.
+                                 
+                             </p>    
+                             
+                         </div>
+                     
+                         <div class="mivi">
+                            
+                             <div class="fronth2m2" id="fmision2">
+                                 <h2>Misión</h2>
+                                 <p class="pmivi" id="uno">
+                                     Inversiones La Granera se dedica a liderar la comercialización y exportación 
+                                     de madera, subproductos y fertilizantes de alta calidad. Nuestra misión es 
+                                     satisfacer las necesidades de los clientes con respuestas rápidas. 
+                                     Colaboramos con los mejores fabricantes nacionales y ofrecemos soluciones 
+                                     comerciales excepcionales a nivel internacional.
+                                 </p>
+                             </div>
+                         
+                             <div class="fronth2m2" id="fvision2">
+                                 <h2>Visión</h2>
+                                 <p class="pmivi" id="dos">
+                                     Nos visualizamos como líderes reconocidos en la comercialización de productos 
+                                     relacionados con la madera, expandiendo nuestra presencia global. Buscamos ser 
+                                     pioneros en sostenibilidad e innovación, manteniendo relaciones comerciales a 
+                                     largo plazo basadas en la integridad y un servicio excepcional. Nuestra visión 
+                                     incluye contribuir al desarrollo sostenible y ser un referente en la industria.
+                                 </p>
+                             </div>
+                         
+                         </div>               
+                     </div>
+                     
+        </div>
+
+
+        <!-- productos 1 -->
         <div class="section section--js" id="servicios" onclick=myFunction()>
             <div class="subsecLeft" id="box1">
                 <h2>Pellets de madera de Pino Caribe</h2>
@@ -81,7 +144,7 @@
             </div>
         </div>
       
-        <!-- nosotros -->
+        <!-- productos 2 -->
         <div class="section section--js" id="nosotros" onclick=myFunction()>
             <div class="subsecLeft" id="box3">
                 <h2>Sulfato de Calcio</h2>
@@ -100,9 +163,9 @@
                     <input type="email" name="email" placeholder="example@yourDomainMail"  maxlength="50" required>
                     <label>Asunto</label>
                     <input type="text" name="subject" placeholder="Your business" maxlength="50" required>
-                    <label>Descripcion</label>
+                    <label>Descripción</label>
                     <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Describe your business..." maxlength="500" required></textarea>
-                    <input class="submit" type="submit" value="Send">
+                    <input class="submit" type="submit" value="Enviar">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://gabosavan.github.io/pages/request.html">
                 </form>
