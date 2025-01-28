@@ -394,7 +394,7 @@ p{
     background-position: center center;
 }
 
-#servicios h2{
+#servicios, #prod3 h2{
   color: white;
 }
 
@@ -404,7 +404,13 @@ p{
     min-height: calc(100vh);
 }
 
-#servicios, #nosotros {
+#prod3{
+  background: url(../assets/carbon9.png) no-repeat;
+  background-size: cover;
+  min-height: calc(100vh);
+}
+
+#servicios, #nosotros, #prod3 {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -439,14 +445,14 @@ p{
     z-index: 100;
   }
   /* --------------hacer responsive---------------------- */
-  #box1, #box3{
+  #box1, #box3, #box5{
     /* margin-top: 100px;   */
     background-color: aqua;
     position: relative;
     filter: drop-shadow(-40px 0px 30px rgba(0,0,0,0.5));
   }
 
-  #box2, #box4{
+  #box2, #box4, #box6{
     background-color: rgb(225, 0, 255);
     position: relative;
     filter: drop-shadow(-40px 0px 30px rgba(0,0,0,0.5));
@@ -481,6 +487,24 @@ p{
 
   #box4{
     background: url(../assets/potassium\ sulfate.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 30vh;
+    height: 30vh;
+    margin-right: 100px;
+  }
+
+  #box5{
+    background: url(../assets/carbon1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 30vh;
+    height: 30vh;
+    margin-left: 100px;
+  }
+
+  #box6{
+    background: url(../assets/carbon5.png) no-repeat;
     background-size: cover;
     background-position: center center;
     width: 30vh;
@@ -769,7 +793,7 @@ footer h2{
     margin-left: 0px;
   }
 
-  #box1, #box3{
+  #box1, #box3, #box5{
     margin-top: 0px;
     background-position: center center;
     width: 25vh;
@@ -777,7 +801,7 @@ footer h2{
     margin-left: 0px;
   }
 
-  #box2, #box4{
+  #box2, #box4, #box6{
     margin-bottom: 0px;
     background-position: center center;
     width: 25vh;
@@ -794,7 +818,7 @@ footer h2{
 /* segunda media query */
 @media(max-width: 700px){
 
-    #servicios, #nosotros{
+    #servicios, #nosotros, #prod3{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
@@ -812,7 +836,7 @@ footer h2{
   width: 500px;
 }
 
-#box1, #box3{
+#box1, #box3, #box5{
   margin-top: 80px;
   background-position: center center;
   width: 25vh;
@@ -820,7 +844,7 @@ footer h2{
   margin-left: 0px;
 }
 
-#box2, #box4{
+#box2, #box4, #box6{
   margin-bottom: 80px;
   background-position: center center;
   width: 25vh;
@@ -885,7 +909,7 @@ footer div h2{
 /* cuarto media query */
 @media(max-width: 450px){
 
-  #box1, #box3{
+  #box1, #box3, #box5{
     margin-top: 80px;
     background-position: center center;
     width: 18vh;
@@ -893,7 +917,7 @@ footer div h2{
     margin-left: 0px;
   }
 
-  #box2, #box4{
+  #box2, #box4, #box6{
     margin-bottom: 80px;
     background-position: center center;
     width: 18vh;
@@ -923,7 +947,7 @@ footer div h2{
     font-size: 10px;
   }
 
-  #servicios, #nosotros {
+  #servicios, #nosotros, #prod3 {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -938,7 +962,7 @@ footer div h2{
   margin-left: 0px;
 }
 
-#box1, #box3{
+#box1, #box3, #box5{
   margin-top: 0px;
   background-position: center center;
   width: 30vh;
@@ -946,7 +970,7 @@ footer div h2{
   margin-left: 0px;
 }
 
-#box2, #box4{
+#box2, #box4, #box6{
   margin-bottom: 0px;
   background-position: center center;
   width: 30vh;
