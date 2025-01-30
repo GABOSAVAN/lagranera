@@ -405,7 +405,7 @@ p{
 }
 
 #prod3{
-  background: url(../assets/carbon9.png) no-repeat;
+  background: url(../assets/carbon9.jpg) no-repeat;
   background-size: cover;
   min-height: calc(100vh);
 }
@@ -504,7 +504,7 @@ p{
   }
 
   #box6{
-    background: url(../assets/carbon5.png) no-repeat;
+    background: url(../assets/carbon2.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     width: 30vh;
