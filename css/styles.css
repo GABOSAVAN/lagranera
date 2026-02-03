@@ -410,6 +410,12 @@ p{
   min-height: calc(100vh);
 }
 
+#prod4{
+  background: url(../assets/leoUso.jpg) no-repeat;
+  background-size: cover;
+  min-height: calc(100vh);
+}
+
 #servicios, #nosotros, #prod3 {
     background-color: white;
     display: grid;
@@ -510,6 +516,15 @@ p{
     width: 30vh;
     height: 30vh;
     margin-right: 100px;
+  }
+
+  #box7{
+    background: url(../assets/leo1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 60vh;
+    height: 30vh;
+    margin-left: 100px;
   }
 
   .section--js h2{
@@ -961,6 +976,12 @@ footer div h2{
   height: 25vh; */
   margin-left: 0px;
 }
+
+.bigImg{
+  width: 100px;
+  background-color: #0F0;
+}
+
 
 #box1, #box3, #box5{
   margin-top: 0px;
