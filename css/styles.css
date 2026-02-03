@@ -833,7 +833,7 @@ footer h2{
 /* segunda media query */
 @media(max-width: 700px){
 
-    #servicios, #nosotros, #prod3{
+    #servicios, #nosotros, #prod3, #prod4{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
@@ -841,6 +841,7 @@ footer h2{
     transition: .3s;
     margin: auto;
 }
+
 
 #inicio #logopc{
   display: none;
@@ -864,6 +865,14 @@ footer h2{
   background-position: center center;
   width: 25vh;
   height: 15vh;
+  margin-right: 0px;
+}
+
+#box7{
+  margin: 60px;
+  background-position: center center;
+  width: 55vw;
+  height: 35vh;
   margin-right: 0px;
 }
 
@@ -940,6 +949,14 @@ footer div h2{
     margin-right: 0px;
 }
 
+#box7{
+  margin: 60px;
+  background-position: center center;
+  width: 50vw;
+  height: 30vh;
+  margin-right: 0px;
+}
+
 #inicio #logocel{
   width: 350px;
 }
@@ -996,6 +1013,14 @@ footer div h2{
   background-position: center center;
   width: 30vh;
   height: 25vh;
+  margin-right: 0px;
+}
+
+#box7{
+  margin: 60px;
+  background-position: center center;
+  width: 50vw;
+  height: 30vh;
   margin-right: 0px;
 }
 
