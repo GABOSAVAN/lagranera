@@ -416,6 +416,12 @@ p{
   min-height: calc(100vh);
 }
 
+#prod5{
+  background: url(../assets/calizaFondo.jpeg) no-repeat;
+  background-size: cover;
+  min-height: calc(100vh);
+}
+
 #servicios, #nosotros, #prod3 {
     background-color: white;
     display: grid;
@@ -520,6 +526,15 @@ p{
 
   #box7{
     background: url(../assets/leo1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 60vh;
+    height: 30vh;
+    margin-left: 100px;
+  }
+
+  #box8{
+    background: url(../assets/caliza.jpeg) no-repeat;
     background-size: cover;
     background-position: center center;
     width: 60vh;
@@ -833,7 +848,7 @@ footer h2{
 /* segunda media query */
 @media(max-width: 700px){
 
-    #servicios, #nosotros, #prod3, #prod4{
+    #servicios, #nosotros, #prod3, #prod4, #prod5{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
@@ -868,7 +883,7 @@ footer h2{
   margin-right: 0px;
 }
 
-#box7{
+#box7, #box8{
   margin: 60px;
   background-position: center center;
   width: 55vw;
@@ -949,7 +964,7 @@ footer div h2{
     margin-right: 0px;
 }
 
-#box7{
+#box7, #box8{
   margin: 60px;
   background-position: center center;
   width: 50vw;
@@ -1016,7 +1031,7 @@ footer div h2{
   margin-right: 0px;
 }
 
-#box7{
+#box7, #box8{
   margin: 60px;
   background-position: center center;
   width: 50vw;
