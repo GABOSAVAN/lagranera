@@ -1,237 +1,1164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-76NYFVJ9M7"></script>
-    <script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-76NYFVJ9M7"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
     gtag('config', 'G-76NYFVJ9M7');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Invergranera</title>
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="INVER LA GRANERA C.A. - Comercialización y exportación de madera, fertilizantes, carbón vegetal, leonardita y materias primas agrícolas con estándares de alta calidad.">
+  <meta name="keywords" content="Inver La Granera, madera, pellets de pino, fertilizantes, sulfato de potasio, sulfato de calcio, carbon vegetal, briquetas, leonardita, piedra caliza, exportacion">
+  <meta name="theme-color" content="#ed830d">
+
+  <title>Inver La Granera C.A. | Comercialización y Exportación Agroindustrial</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fef8ee',
+              100: '#fdf0d7',
+              200: '#fadeae',
+              300: '#f6c57a',
+              400: '#f1a444',
+              500: '#ed830d', // Color naranja principal original
+              600: '#d76a08',
+              700: '#b24f09',
+              800: '#8e3e0f',
+              900: '#743410',
+              950: '#421a05',
+            },
+            eco: {
+              50: '#f6f9ed',
+              100: '#ecf3d8',
+              200: '#dae7b5',
+              300: '#c0d68a',
+              400: '#a3c260',
+              500: '#6e9033', // Verde original
+              600: '#5c7a28',
+              700: '#486022',
+              800: '#3c4d20',
+              900: '#34421e',
+            },
+            corp: {
+              light: '#4f4e7e',
+              DEFAULT: '#363559', // Azul corporativo original
+              dark: '#24233e',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Prevent theme FOUC -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom complementary styles -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
-    <main>
+  <!-- ========================================================================
+       TOP ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <div class="bg-corp dark:bg-slate-900 border-b border-corp-light/30 dark:border-slate-800 text-slate-200 text-xs py-2 px-4 transition-colors">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-500/20 text-brand-300 font-medium">
+          <i class="fa-solid fa-earth-americas text-[10px]"></i> Comercio Internacional
+        </span>
+        <span class="hidden sm:inline">Comercialización y Exportación de Materias Primas con Calidad Certificada</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://wa.me/584244200338" class="hover:text-brand-400 transition-colors flex items-center gap-1.5" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> +58 424 420 0338
+        </a>
+        <a href="mailto:administracion@invergranera.com" class="hover:text-brand-400 transition-colors hidden md:flex items-center gap-1.5">
+          <i class="fa-regular fa-envelope text-brand-400"></i> administracion@invergranera.com
+        </a>
+      </div>
+    </div>
+  </div>
 
-         <!-- barra lateral de redes sociales -->
-        <div class="redes">
+  <!-- ========================================================================
+       STICKY NAVBAR
+       ======================================================================== -->
+  <header class="sticky top-0 z-50 glass-nav bg-white/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="Inver La Granera Inicio">
+        <!-- Light mode logo -->
+        <img src="./assets/SVG/Logo horizontal/recursos LOGO LA GRANERA SVG-20.svg" 
+             alt="Inver La Granera Logo" 
+             class="h-[52px] w-auto object-contain dark:hidden transition-transform duration-300 group-hover:scale-105">
+        <!-- Dark mode logo -->
+        <img src="./assets/logogranerahoriblanco.svg" 
+             alt="Inver La Granera Logo" 
+             class="h-[52px] w-auto object-contain hidden dark:block transition-transform duration-300 group-hover:scale-105">
+      </a>
 
-            <a  href="https://wa.me/584244200338">
-                <img src="./assets/facebook.png" alt="facebook">
-            </a>
-            <a href="https://wa.me/584244200338">
-                <img src="./assets/instagram.png" alt="instagram">
-            </a>
-            <a href="https://wa.me/584244200338">
-                <img src="./assets/tiktok.png" alt="tiktok">
-            </a>
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700 dark:text-slate-200">
+        <a href="#inicio" class="nav-desktop-link hover:text-brand-500 transition-colors py-1">Inicio</a>
+        <a href="#nosotros" class="nav-desktop-link hover:text-brand-500 transition-colors py-1">Nosotros</a>
+        <a href="#productos" class="nav-desktop-link hover:text-brand-500 transition-colors py-1">Productos</a>
+        <a href="#ventajas" class="nav-desktop-link hover:text-brand-500 transition-colors py-1">Ventajas</a>
+        <a href="#contacto" class="nav-desktop-link hover:text-brand-500 transition-colors py-1">Contacto</a>
+      </nav>
 
-        </div>
+      <!-- Action Buttons & Dark Mode Toggle -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Dark Mode Toggle Button -->
+        <button type="button" 
+                class="theme-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" 
+                aria-label="Alternar modo oscuro">
+          <i class="fa-solid fa-moon text-base dark:hidden"></i>
+          <i class="fa-solid fa-sun text-base hidden dark:block text-amber-400"></i>
+        </button>
 
-        <!-- logo whatsapp -->
-        <a href="https://wa.me/584244200338" id="chat">
-            <img src="./assets/whatsapp.png" alt="whatsapp" id="whatsappImg">
+        <!-- Direct WhatsApp CTA -->
+        <a href="https://wa.me/584244200338" 
+           target="_blank" 
+           rel="noopener"
+           class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-500/20 hover:shadow-lg hover:shadow-brand-500/30 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Cotizar Ahora</span>
         </a>
 
-        <nav class="menu">        
-            <!-- <div class="menu"> -->
-                <input type="checkbox" id="checkmenu">
-                <div class="logo"></div>
-                
-                <ul class="list" onclick=myFunction()>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#wenew">Nosotros</a></li>
-                    <li><a href="#servicios">Productos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <!-- <li><a href="#"> -->
-                    <input type="checkbox" id="theme">
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" 
+                id="mobile-menu-btn" 
+                class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-500 focus:outline-none" 
+                aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-                    <!-- modo oscuro -->
-                    <label for="theme">
-                        <img src="./assets/sun2.png" class="icon2" id="dia" alt="">
-                        <img src="./assets/moon.png" class="icon1" id="dark" alt="">
-                    </label>
-                    <!-- </a></li> -->
-                </ul> 
-                    
-                <label for="checkmenu" class="btn-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>            
-                </label>                                
-        </nav>
-       
-        <!-- VIDEO DE FONDO -->
-        <div class="fondo">
-            
-        </div> 
-        
-        
-        <!-- SECCIONES GENERALES -->
-        <div class="section" id="inicio" onclick=myFunction()>
-            <img id="logopc" src="./assets/SVG/Logo horizontal/recursos LOGO LA GRANERA SVG-20.svg" alt="logo_horizontal">
-            <img id="logocel" src="./assets/SVG/Logo principal/recursos LOGO LA GRANERA SVG_Mesa de trabajo 1 copia.svg" alt="logo_vertical">
-        </div>
+  <!-- ========================================================================
+       MOBILE DRAWER MENU
+       ======================================================================== -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm lg:hidden"></div>
+  
+  <div id="mobile-drawer" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 p-6 flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-out shadow-2xl lg:hidden">
+    <div>
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
+        <img src="./assets/SVG/Logo horizontal/recursos LOGO LA GRANERA SVG-20.svg" alt="Inver La Granera" class="h-9 w-auto dark:hidden">
+        <img src="./assets/logogranerahoriblanco.svg" alt="Inver La Granera" class="h-9 w-auto hidden dark:block">
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 rounded-lg" aria-label="Cerrar menú">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
 
+      <!-- Drawer Nav Links -->
+      <nav class="flex flex-col gap-2 mt-6 text-base font-medium">
+        <a href="#inicio" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-500 text-slate-700 dark:text-slate-200 transition-colors">
+          <i class="fa-solid fa-house text-slate-400 w-5"></i> Inicio
+        </a>
+        <a href="#nosotros" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-500 text-slate-700 dark:text-slate-200 transition-colors">
+          <i class="fa-solid fa-building text-slate-400 w-5"></i> Nosotros
+        </a>
+        <a href="#productos" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-500 text-slate-700 dark:text-slate-200 transition-colors">
+          <i class="fa-solid fa-boxes-stacked text-slate-400 w-5"></i> Productos
+        </a>
+        <a href="#ventajas" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-500 text-slate-700 dark:text-slate-200 transition-colors">
+          <i class="fa-solid fa-award text-slate-400 w-5"></i> Ventajas
+        </a>
+        <a href="#contacto" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-500 text-slate-700 dark:text-slate-200 transition-colors">
+          <i class="fa-solid fa-paper-plane text-slate-400 w-5"></i> Contacto
+        </a>
+      </nav>
+    </div>
 
-        <div class="section" id="wenew">
-            
-                 
-                     <div class="back" id="backid">
-                         <div class="nos" id="nosback">
-                            <h2>¿Quienes somos?</h2>
-                             <p>
-                                 INVER LA GRANERA C.A., es una empresa reconocida por su seriedad,
-                                solvencia y ética de trabajo, que se dedica a la comercialización y exportación de madera
-                                y sub-productos transformados, fertilizantes y materia prima para su producción, con estándares
-                                de alta calidad, dando respuesta oportuna y atendiendo la necesidades y requerimientos de cada
-                                cliente en los lapsos de tiempo más expeditos.
-                            </p><br>
-                            <p>
-                                
-                                 Trabajamos con las mejores empresas fabricantes a nivel nacional, apoyándonos 
-                                 en la gran variedad de productos que se ofrecen en el mercado y con un
-                                 grupo de profesionales capacitados para ofrecer las más oportunas soluciones
-                                 comerciales a nuestros clientes, en el mercado internacional.
-                                 
-                             </p><br> 
-                             <p>
-                                Contamos con un equipo de trabajo preparado, motivado y comprometido con la empresa, 
-                                con los clientes, los proveedores y la comunidad.
-
-                             </p>
-                             
-                         </div>
-                     
-                         <div class="mivi">
-                            
-                             <div class="fronth2m2" id="fmision2">
-                                 <h2>Misión</h2>
-                                 <p class="pmivi" id="uno">
-                                    Atender las necesidades del mercado nacional e internacional, principalmente del 
-                                    sector agrícola, comercializando y exportando madera y sub-productos transformados, 
-                                    fertilizantes y materia prima para su producción. Nuestro principal propósito es 
-                                    satisfacer las necesidades de los clientes con respuestas rápidas. 
-                                 </p>
-                             </div>
-                         
-                             <div class="fronth2m2" id="fvision2">
-                                 <h2>Visión</h2>
-                                 <p class="pmivi" id="dos">
-                                    Consolidar el liderazgo en el mercado nacional e internacional, en la comercialización
-                                    y exportación de nuestros productos; para convertirnos en el mejor proveedor, ofreciendo 
-                                    la mejor atención, los mejores precios, soluciones oportunas y un servicio de excelencia, 
-                                    manteniendo los más altos estándares de calidad en el proceso de exportación, garantizando 
-                                    un envío seguro y puntual; evolucionando constantemente para generar la mejor oferta de valor 
-                                    al cliente, que se adecúe a sus necesidades y exigencias, asegurando un suministro confiable.
-                                 </p>
-                             </div>
-                         
-                         </div>               
-                     </div>
-                     
-        </div>
-
-
-        <!-- productos 1 -->
-        <div class="section section--js" id="servicios">
-            <div class="subsecLeft" id="box1">
-                <h2>Pellets de madera de Pino Caribe</h2>
-            </div>
-            <div class="subsecRigth" id="box2">
-                <h2>Fertilizantes Hidrogenados y con Sulfato de Potasio</h2>
-            </div>
-        </div>
+    <!-- Drawer Footer Actions -->
+    <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+      <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-md">
+        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Directo
+      </a>
       
-        <!-- productos 2 -->
-        <div class="section section--js" id="nosotros">
-            <div class="subsecLeft" id="box3">
-                <h2>Sulfato de Calcio</h2>
+      <div class="flex items-center justify-center gap-5 text-slate-500 dark:text-slate-400 pt-2">
+        <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="hover:text-brand-500"><i class="fa-brands fa-facebook text-xl"></i></a>
+        <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="hover:text-brand-500"><i class="fa-brands fa-instagram text-xl"></i></a>
+        <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="hover:text-brand-500"><i class="fa-brands fa-tiktok text-xl"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Hero Background Image with Rich Dual Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="./assets/bgbanner.jpg" alt="Agroindustria y Madera" class="w-full h-full object-cover object-center filter brightness-95">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-950/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-slate-950/95"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-500/20 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center lg:text-left">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Column -->
+        <div class="lg:col-span-8 flex flex-col items-center lg:items-start space-y-6">
+          
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-semibold backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+            <span>Solvencia, Ética & Calidad de Exportación</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
+            Comercialización y Exportación de <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-amber-200">Madera, Fertilizantes</span> y Minerales
+          </h1>
+
+          <!-- Corporate Subtitle -->
+          <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed">
+            <strong class="text-white font-semibold">INVER LA GRANERA C.A.</strong> — Atendemos con respuestas oportunas y en lapsos expeditos las necesidades del sector agrícola e industrial con los estándares más exigentes del mercado nacional e internacional.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
+            <a href="#productos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-base shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 transition-all transform hover:-translate-y-0.5">
+              <span>Explorar Catálogo</span>
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
+            <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base border border-white/20 backdrop-blur-md transition-all transform hover:-translate-y-0.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+              <span>Consultar por WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics / Micro Stats -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 w-full border-t border-slate-700/60 mt-8">
+            <div class="text-left">
+              <div class="text-2xl sm:text-3xl font-extrabold text-brand-400 font-heading">100%</div>
+              <div class="text-xs text-slate-300 font-medium">Calidad Garantizada</div>
             </div>
-            <div class="subsecRigth" id="box4">
-                <h2>Sulfato de Potasio</h2>
+            <div class="text-left">
+              <div class="text-2xl sm:text-3xl font-extrabold text-eco-400 font-heading">Expeditos</div>
+              <div class="text-xs text-slate-300 font-medium">Tiempos de Despacho</div>
             </div>
+            <div class="text-left">
+              <div class="text-2xl sm:text-3xl font-extrabold text-amber-300 font-heading">Líderes</div>
+              <div class="text-xs text-slate-300 font-medium">Fabricantes Asociados</div>
+            </div>
+            <div class="text-left">
+              <div class="text-2xl sm:text-3xl font-extrabold text-sky-400 font-heading">Global</div>
+              <div class="text-xs text-slate-300 font-medium">Mercado Exterior</div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- productos 3 -->
-        <div class="section section--js" id="prod3">
-            <div class="subsecLeft" id="box5">
-                <h2>Carbón Vegetal</h2>
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-4 hidden lg:flex flex-col items-center justify-center">
+          <div class="relative w-full max-w-sm glass-card bg-slate-900/60 border border-slate-700/60 rounded-3xl p-6 shadow-2xl animate-float">
+            <!-- Logo Marca Oficial -->
+            <div class="flex items-center justify-center mb-5 py-1">
+              <img src="./assets/logogranerahoriblanco.svg" alt="Inver La Granera C.A." class="h-16 w-auto max-w-[85%] object-contain drop-shadow-md">
             </div>
-            <div class="subsecRigth" id="box6">
-                <h2>Briqueta de carbón vegetal</h2>
+            <h3 class="text-lg font-bold text-center text-white font-heading">Inver La Granera C.A.</h3>
+            <p class="text-slate-300 text-xs text-center mt-2 leading-relaxed">
+              Distribución y exportación de materias primas seleccionadas con certificación y riguroso control logístico.
+            </p>
+            
+            <div class="mt-6 space-y-3">
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700/40 text-xs text-slate-200">
+                <i class="fa-solid fa-tree text-eco-400 text-base"></i>
+                <span>Madera de Pino y Biomasa Energética</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700/40 text-xs text-slate-200">
+                <i class="fa-solid fa-seedling text-brand-400 text-base"></i>
+                <span>Fertilizantes y Nutrición Agrícola</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700/40 text-xs text-slate-200">
+                <i class="fa-solid fa-mountain text-sky-400 text-base"></i>
+                <span>Minerales, Leonardita y Enmiendas</span>
+              </div>
             </div>
+          </div>
         </div>
 
-         <!-- producto 4 -->
-         <div class="section section--js" id="prod4">            
-            <div class="subsecRigth" id="box7">
-                <h2>Leonardita</h2>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION: NOSOTROS / QUIÉNES SOMOS / MISIÓN & VISIÓN
+       ======================================================================== -->
+  <section id="nosotros" class="py-24 bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-900/50 mb-3">
+          ¿Quiénes Somos?
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Solidez Comercial y Compromiso con el Desarrollo Agroindustrial
+        </h2>
+        <div class="w-16 h-1.5 bg-brand-500 rounded-full mx-auto mt-4"></div>
+      </div>
+
+      <!-- Main About Content: Split Grid -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center mb-16">
+        
+        <!-- Left Story Column -->
+        <div class="lg:col-span-7 space-y-6 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+          <p class="font-medium text-slate-900 dark:text-white text-lg sm:text-xl">
+            <strong class="text-brand-500 font-bold">INVER LA GRANERA C.A.</strong> es una empresa reconocida por su seriedad, solvencia y ética de trabajo, que se dedica a la comercialización y exportación de madera y sub-productos transformados, fertilizantes y materia prima para su producción.
+          </p>
+          <p>
+            Operamos con estándares de alta calidad, dando respuesta oportuna y atendiendo las necesidades y requerimientos de cada cliente en los lapsos de tiempo más expeditos.
+          </p>
+          <p>
+            Trabajamos con las mejores empresas fabricantes a nivel nacional, apoyándonos en la gran variedad de productos que se ofrecen en el mercado y con un grupo de profesionales capacitados para ofrecer las más oportunas soluciones comerciales a nuestros clientes, en el mercado internacional.
+          </p>
+          <p class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border-l-4 border-eco-500 text-sm sm:text-base font-medium text-slate-700 dark:text-slate-200">
+            Contamos con un equipo de trabajo preparado, motivado y comprometido con la empresa, con los clientes, los proveedores y la comunidad.
+          </p>
         </div>
 
-        <!-- producto 5 -->
-         <div class="section section--js" id="prod5">            
-            <div class="subsecRigth" id="box8">
-                <h2 style="color: white;">Piedra Caliza</h2>
+        <!-- Right Showcase Card with Real Assets -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+            <img src="./assets/bgservicios.jpg" alt="Instalaciones y Logística Inver La Granera" class="w-full h-96 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-eco-500/80 text-white text-xs font-semibold backdrop-blur-md mb-2">
+                <i class="fa-solid fa-leaf"></i> Sostenibilidad & Eficiencia
+              </span>
+              <h4 class="text-xl font-bold font-heading">Red Logística Nacional e Internacional</h4>
+              <p class="text-xs text-slate-200 mt-1">Conexión directa entre centros de producción y puertos de exportación.</p>
             </div>
+          </div>
         </div>
 
-        <!-- formulario -->
-        <div class="section" id="contacto">
-            <div id="boxform">
-                <h2 id="h2">Contacto</h2>
-                <form action="https://formsubmit.co/90737043b000e2a4b49c3df0d8457828" method="POST">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="ejemplo@dominio.com"  maxlength="50" required>
-                    <label>Asunto</label>
-                    <input type="text" name="subject" placeholder="Asunto de tu mensaje" maxlength="50" required>
-                    <label>Descripción</label>
-                    <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Escribe tu mensaje..." maxlength="500" required></textarea>
-                    <input class="submit" type="submit" value="Enviar">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://invergranera.com/pages/emails.html">
-                </form>
-            </div>
+      </div>
+
+      <!-- Misión & Visión Cards -->
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Misión Card -->
+        <div class="relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-3">Misión</h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+            Atender las necesidades del mercado nacional e internacional, principalmente del sector agrícola, comercializando y exportando madera y sub-productos transformados, fertilizantes y materia prima para su producción. Nuestro principal propósito es satisfacer las necesidades de los clientes con respuestas rápidas.
+          </p>
         </div>
-                
-    </main>
 
-    <footer>
+        <!-- Visión Card -->
+        <div class="relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-eco-500/10 text-eco-500 flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-3">Visión</h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+            Consolidar el liderazgo en el mercado nacional e internacional, en la comercialización y exportación de nuestros productos; para convertirnos en el mejor proveedor, ofreciendo la mejor atención, los mejores precios, soluciones oportunas y un servicio de excelencia, manteniendo los más altos estándares de calidad en el proceso de exportación, garantizando un envío seguro y puntual; evolucionando constantemente para generar la mejor oferta de valor al cliente, asegurando un suministro confiable.
+          </p>
+        </div>
 
-        <div class="redesfooter">
-            <h2 id="red">Siguenos en nuestras redes sociales</h2>
-            <div>
-                <a  href="https://www.facebook.com">
-                    <img src="./assets/facebook.png" alt="facebook">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION: PRODUCTOS (CATÁLOGO COMPLETO - 8 PRODUCTOS)
+       ======================================================================== -->
+  <section id="productos" class="py-24 bg-slate-100/70 dark:bg-slate-950 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-eco-600 dark:text-eco-400 bg-eco-50 dark:bg-eco-950/60 border border-eco-200 dark:border-eco-900/50 mb-3">
+          Catálogo Oficial
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Nuestros Productos de Exportación
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          Materias primas, fertilizantes, minerales y biocombustibles seleccionados bajo rigurosos controles de calidad.
+        </p>
+        <div class="w-16 h-1.5 bg-eco-500 rounded-full mx-auto mt-4"></div>
+      </div>
+
+      <!-- Filter Tabs Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14">
+        <button type="button" 
+                data-filter="all" 
+                class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-brand-500 text-white shadow-md">
+          Todos los Productos (8)
+        </button>
+        <button type="button" 
+                data-filter="madera" 
+                class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500">
+          <i class="fa-solid fa-tree mr-1.5 text-amber-500"></i> Madera & Biomasa
+        </button>
+        <button type="button" 
+                data-filter="fertilizantes" 
+                class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500">
+          <i class="fa-solid fa-seedling mr-1.5 text-emerald-500"></i> Fertilizantes & Nutrición
+        </button>
+        <button type="button" 
+                data-filter="minerales" 
+                class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500">
+          <i class="fa-solid fa-mountain mr-1.5 text-sky-500"></i> Minerales & Suelo
+        </button>
+      </div>
+
+      <!-- Product Cards Grid: 8 Products -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        
+        <!-- PRODUCT 1: Pellets de madera de Pino Caribe -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="madera">
+          <div>
+            <!-- Image container -->
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/pellet.webp" alt="Pellets de madera de Pino Caribe" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/90 text-white backdrop-blur-md">
+                Madera & Biomasa
+              </span>
+            </div>
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Pellets de madera de Pino Caribe
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Biocombustible ecológico de alta densidad energética y bajo contenido de cenizas para calderas y energía.
+              </p>
+              
+              <!-- Quick specs pill list -->
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Poder > 4.8 kWh/kg</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Humedad &lt; 8%</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card Actions -->
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="pellet" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Pellets de madera de Pino Caribe" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2: Fertilizantes Hidrogenados y con Sulfato de Potasio -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="fertilizantes">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/fertilizantes.jpg" alt="Fertilizantes Hidrogenados y con Sulfato de Potasio" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-600/90 text-white backdrop-blur-md">
+                Fertilizantes
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Fertilizantes Hidrogenados y con Sulfato de Potasio
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Fórmulas agrícolas balanceadas para óptima absorción foliar y radicular, aumentando el rendimiento de cosechas.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">NPK + K2SO4</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Bajo índice salino</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="fertilizantes" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Fertilizantes Hidrogenados y con Sulfato de Potasio" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 3: Sulfato de Calcio -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="minerales">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/calcium sulfate.jpg" alt="Sulfato de Calcio" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-600/90 text-white backdrop-blur-md">
+                Minerales & Suelo
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Sulfato de Calcio
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Enmienda mineral natural (Yeso agrícola). Acondicionador de suelos sódicos y fuente soluble de calcio y azufre.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Pureza > 90%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Calcio + Azufre</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="calcio" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Sulfato de Calcio" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 4: Sulfato de Potasio -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="fertilizantes">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/potassium sulfate.jpg" alt="Sulfato de Potasio" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-600/90 text-white backdrop-blur-md">
+                Fertilizantes
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Sulfato de Potasio
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Fertilizante SOP de alta concentración potásica y pureza, libre de cloruro para cultivos intensivos de alto valor.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">K2O > 50%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Libre de Cloro</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="potasio" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Sulfato de Potasio" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 5: Carbón Vegetal -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="madera">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/carbon1.jpg" alt="Carbón Vegetal" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/90 text-white backdrop-blur-md">
+                Madera & Biomasa
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Carbón Vegetal
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Carbón seleccionado de maderas duras. Encendido homogéneo, alta temperatura constante y escasa ceniza.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Carbono > 75%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Bajo humo</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="carbon" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Carbón Vegetal" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 6: Briqueta de carbón vegetal -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="madera">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/carbon2.jpg" alt="Briqueta de carbón vegetal" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/90 text-white backdrop-blur-md">
+                Madera & Biomasa
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Briqueta de carbón vegetal
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Biocombustible compacto de calor sostenido. Brasa uniforme durante más de 3 horas sin chispas ni olores.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Brasa 3-4 hrs</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Aglutinante orgánico</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="briqueta" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Briqueta de carbón vegetal" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 7: Leonardita -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="minerales">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/leo1.jpg" alt="Leonardita" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-600/90 text-white backdrop-blur-md">
+                Minerales & Suelo
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Leonardita
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Materia orgánica mineralizada fósil de máxima pureza, rica en ácidos húmicos y fúlvicos para regeneración de suelos.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Ext. Húmico > 65%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Bioestimulante</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="leonardita" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Leonardita" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 8: Piedra Caliza -->
+        <div class="product-card group flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1.5" data-category="minerales">
+          <div>
+            <div class="relative h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="./assets/caliza.jpeg" alt="Piedra Caliza" class="product-card-img w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-600/90 text-white backdrop-blur-md">
+                Minerales & Suelo
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-500 transition-colors">
+                Piedra Caliza
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2">
+                Carbonato de calcio seleccionado de alta pureza. Corrector de pH para suelos ácidos, nutrición animal e industria.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">CaCO3 > 92%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800">Cal Agrícola</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center gap-2 border-t border-slate-100 dark:border-slate-800/80 mt-4">
+            <button type="button" data-product-id="caliza" class="open-product-modal flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:text-brand-500 transition-colors text-center">
+              Ver Ficha
+            </button>
+            <button type="button" data-product-name="Piedra Caliza" class="quote-product-btn flex-1 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors text-center">
+              Cotizar
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION: POR QUÉ ELEGIRNOS / VENTAJAS COMPETITIVAS
+       ======================================================================== -->
+  <section id="ventajas" class="py-24 bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-900/50 mb-3">
+          Nuestras Fortalezas
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          ¿Por qué confiar en Inver La Granera?
+        </h2>
+        <div class="w-16 h-1.5 bg-brand-500 rounded-full mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/50 hover:border-brand-500 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-2">Seriedad y Solvencia</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            Reconocida trayectoria fundamentada en la ética de trabajo y el estricto cumplimiento de cada acuerdo comercial.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/50 hover:border-eco-500 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-eco-500/10 text-eco-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-2">Respuesta Oportuna</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            Atención personalizada y eficiente en lapsos de tiempo expeditos para resolver tus necesidades sin demoras.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/50 hover:border-sky-500 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-ship"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-2">Logística Segura</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            Gestión integral de embarque y despacho garantizando un envío puntual, seguro y con embalaje óptimo.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/50 hover:border-amber-500 transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-2">Calidad Certificada</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            Alianzas estratégicas con los mejores fabricantes nacionales para entregar insumos con especificaciones de primer orden.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION: CONTACTO / FORMULARIO DE COTIZACIÓN
+       ======================================================================== -->
+  <section id="contacto" class="py-24 bg-slate-100/70 dark:bg-slate-950 relative overflow-hidden transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-900/50 mb-3">
+          Contacto Directo
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Solicita una Cotización o Asesoría Comercial
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          Envíanos tu requerimiento y nuestro equipo comercial te responderá a la brevedad posible.
+        </p>
+        <div class="w-16 h-1.5 bg-brand-500 rounded-full mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Contact Info Box -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+            
+            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white">
+              Información Corporativa
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Estamos a tu disposición para atender cotizaciones a granel, pedidos especiales para exportación y asesoría técnica de productos.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              
+              <!-- WhatsApp -->
+              <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100/80 transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">Atención WhatsApp</div>
+                  <div class="text-slate-900 dark:text-white font-bold text-base mt-0.5">+58 424 420 0338</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Respuesta inmediata</div>
+                </div>
+              </a>
+
+              <!-- Ventas Email -->
+              <a href="mailto:administracion@invergranera.com" class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-100 transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-brand-500 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">Departamento de Ventas</div>
+                  <div class="text-slate-900 dark:text-white font-bold text-sm sm:text-base mt-0.5 break-all">administracion@invergranera.com</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Cotizaciones y contratos</div>
+                </div>
+              </a>
+
+              <!-- Atención al Cliente Email -->
+              <a href="mailto:atencionalcliente@invergranera.com" class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-100 transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-corp text-white flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Atención al Cliente</div>
+                  <div class="text-slate-900 dark:text-white font-bold text-sm sm:text-base mt-0.5 break-all">atencionalcliente@invergranera.com</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Soporte y seguimiento</div>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+              <span class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-wider">
+                Síguenos en Redes Sociales
+              </span>
+              <div class="flex items-center gap-3">
+                <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#1877F2] transition-colors flex items-center justify-center" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com">
-                    <img src="./assets/instagram.png" alt="instagram">
+                <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#E4405F] transition-colors flex items-center justify-center" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com">
-                    <img src="./assets/tiktok.png" alt="tiktok">
+                <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-white hover:bg-black transition-colors flex items-center justify-center" aria-label="TikTok">
+                  <i class="fa-brands fa-tiktok"></i>
                 </a>
+              </div>
             </div>
+
+          </div>
         </div>
 
-        <div class="emails">
-            <h2 id="cont">Contactar con departamentos:</h2>
-            <ul>
-                <li><a href="mailto:administracion@invergranera.com">Ventas</a></li>
-                <li><a href="mailto:atencionalcliente@invergranera.com">Atencion al Cliente</a></li>
-            </ul>
+        <!-- Right Form Column (Preserves formsubmit.co endpoint) -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl">
+            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-2">
+              Envíanos un Mensaje
+            </h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-8">
+              Completa el formulario y te enviaremos una cotización formal detallada.
+            </p>
+
+            <form action="https://formsubmit.co/90737043b000e2a4b49c3df0d8457828" method="POST" class="space-y-6">
+              
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://invergranera.com/pages/emails.html">
+
+              <!-- Email Field -->
+              <div>
+                <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                  Correo Electrónico <span class="text-rose-500">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <input type="email" 
+                         id="form-email" 
+                         name="email" 
+                         required 
+                         maxlength="50" 
+                         placeholder="ejemplo@empresa.com" 
+                         class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm transition-all">
+                </div>
+              </div>
+
+              <!-- Product of Interest Dropdown -->
+              <div>
+                <label for="form-product" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                  Producto de Interés
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                  </div>
+                  <select id="form-product" 
+                          name="producto" 
+                          class="w-full pl-11 pr-10 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm transition-all appearance-none cursor-pointer">
+                    <option value="Consulta General">Selecciona un producto (o consulta general)</option>
+                    <option value="Pellets de madera de Pino Caribe">Pellets de madera de Pino Caribe</option>
+                    <option value="Fertilizantes Hidrogenados y con Sulfato de Potasio">Fertilizantes Hidrogenados y con Sulfato de Potasio</option>
+                    <option value="Sulfato de Calcio">Sulfato de Calcio</option>
+                    <option value="Sulfato de Potasio">Sulfato de Potasio</option>
+                    <option value="Carbón Vegetal">Carbón Vegetal</option>
+                    <option value="Briqueta de carbón vegetal">Briqueta de carbón vegetal</option>
+                    <option value="Leonardita">Leonardita</option>
+                    <option value="Piedra Caliza">Piedra Caliza</option>
+                  </select>
+                  <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subject Field -->
+              <div>
+                <label for="form-subject" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                  Asunto del Mensaje <span class="text-rose-500">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-tag"></i>
+                  </div>
+                  <input type="text" 
+                         id="form-subject" 
+                         name="subject" 
+                         required 
+                         maxlength="70" 
+                         placeholder="Ej: Solicitud de cotización para exportación" 
+                         class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm transition-all">
+                </div>
+              </div>
+
+              <!-- Comments / Description Field -->
+              <div>
+                <label for="form-comments" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                  Descripción o Requerimiento <span class="text-rose-500">*</span>
+                </label>
+                <textarea id="form-comments" 
+                          name="comments" 
+                          rows="4" 
+                          required 
+                          maxlength="500" 
+                          placeholder="Indícanos los detalles de tu consulta, volumen o tonelaje estimado, destino de entrega y cualquier requerimiento especial..." 
+                          class="w-full p-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm transition-all resize-y"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" 
+                      class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-bold text-base shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Enviar Solicitud de Cotización</span>
+              </button>
+
+            </form>
+          </div>
         </div>
 
-        <div class="copy">
-            <h2>Todos los derechos reservados. Inver La Granera® 2026</h2>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRODUCT QUICK VIEW MODAL (DETALLE DE PRODUCTO)
+       ======================================================================== -->
+  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300 hidden">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm cursor-pointer"></div>
+
+    <!-- Modal Dialog Container -->
+    <div id="modal-container" class="relative w-full max-w-3xl bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transform scale-95 transition-all duration-300 z-10 max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <span id="modal-category" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold"></span>
+          <h3 id="modal-title" class="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white mt-1"></h3>
         </div>
-    </footer>
-                <script src="js/main.js"></script>
+        <button id="modal-close" type="button" class="p-2.5 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer" aria-label="Cerrar ventana">
+          <i class="fa-solid fa-xmark text-xl pointer-events-none"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 overflow-y-auto space-y-6">
+        <div class="grid sm:grid-cols-12 gap-6 items-center">
+          <div class="sm:col-span-5 h-56 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="sm:col-span-7">
+            <h4 class="font-semibold text-slate-900 dark:text-white text-base">Descripción Técnica</h4>
+            <p id="modal-tagline" class="text-sm font-medium text-brand-600 dark:text-brand-400 mt-1"></p>
+            <p id="modal-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- Technical Specs Table -->
+        <div>
+          <h4 class="font-semibold text-slate-900 dark:text-white text-sm mb-3">Ficha de Especificaciones</h4>
+          <div id="modal-specs" class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-700/60 divide-y divide-slate-200/50 dark:divide-slate-700/50"></div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 flex flex-col sm:flex-row items-center justify-end gap-3">
+        <a id="modal-wa-btn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-semibold text-sm shadow-md transition-colors cursor-pointer">
+          <i class="fa-brands fa-whatsapp text-lg pointer-events-none"></i>
+          <span>Cotizar por WhatsApp</span>
+        </a>
+        <button id="modal-quote-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-bold text-sm shadow-md transition-colors cursor-pointer">
+          <i class="fa-solid fa-file-invoice pointer-events-none"></i>
+          <span>Completar Formulario</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-slate-950 text-slate-300 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Info Column -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#inicio" class="inline-block">
+            <img src="./assets/logogranerahoriblanco.svg" alt="Inver La Granera" class="h-10 w-auto">
+          </a>
+          <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+            Empresa dedicada a la comercialización y exportación de madera, productos derivados, fertilizantes y materias primas agrícolas con los más altos estándares de calidad.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-500 text-slate-300 hover:text-white transition-colors flex items-center justify-center text-sm" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-500 text-slate-300 hover:text-white transition-colors flex items-center justify-center text-sm" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-500 text-slate-300 hover:text-white transition-colors flex items-center justify-center text-sm" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/584244200338" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-emerald-500 text-slate-300 hover:text-white transition-colors flex items-center justify-center text-sm" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-heading">Navegación</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#inicio" class="hover:text-brand-400 transition-colors">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-brand-400 transition-colors">Quiénes Somos</a></li>
+            <li><a href="#productos" class="hover:text-brand-400 transition-colors">Catálogo de Productos</a></li>
+            <li><a href="#ventajas" class="hover:text-brand-400 transition-colors">Ventajas Competitivas</a></li>
+            <li><a href="#contacto" class="hover:text-brand-400 transition-colors">Contacto y Cotización</a></li>
+          </ul>
+        </div>
+
+        <!-- Products List -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-heading">Líneas de Exportación</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li>Pellets de Pino Caribe</li>
+            <li>Fertilizantes NPK & K2SO4</li>
+            <li>Sulfato de Calcio</li>
+            <li>Sulfato de Potasio (SOP)</li>
+            <li>Carbón Vegetal Seleccionado</li>
+            <li>Briquetas de Carbón</li>
+            <li>Leonardita Fósil</li>
+            <li>Piedra Caliza Agrícola</li>
+          </ul>
+        </div>
+
+        <!-- Departments / Contact -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-heading">Departamentos</h4>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <span class="block text-slate-400">Ventas & Exportaciones:</span>
+              <a href="mailto:administracion@invergranera.com" class="text-brand-400 hover:underline">administracion@invergranera.com</a>
+            </li>
+            <li>
+              <span class="block text-slate-400">Atención al Cliente:</span>
+              <a href="mailto:atencionalcliente@invergranera.com" class="text-brand-400 hover:underline">atencionalcliente@invergranera.com</a>
+            </li>
+            <li>
+              <span class="block text-slate-400">Teléfono / WhatsApp:</span>
+              <a href="https://wa.me/584244200338" class="text-emerald-400 hover:underline">+58 424 420 0338</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>Todos los derechos reservados. INVER LA GRANERA C.A. ® 2026</p>
+        <p class="text-slate-600">Calidad, Seriedad y Ética en Comercio Exterior</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING ACTION BUTTONS: WHATSAPP & BACK TO TOP
+       ======================================================================== -->
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/584244200338" 
+     target="_blank" 
+     rel="noopener" 
+     class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all whatsapp-pulse group" 
+     aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <!-- Tooltip -->
+    <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity">
+      ¿Podemos ayudarte? ¡Escríbenos!
+    </span>
+  </a>
+
+  <!-- Floating Scroll To Top -->
+  <button type="button" 
+          id="back-to-top" 
+          class="fixed bottom-24 right-7 z-40 w-12 h-12 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-xl opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:text-brand-500 hover:border-brand-500 flex items-center justify-center text-base" 
+          aria-label="Volver al inicio de la página">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Interactive Logic -->
+  <script src="js/main.js"></script>
 </body>
 </html>
